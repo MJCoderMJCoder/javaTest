@@ -11,6 +11,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Base64;
+import java.util.UUID;
 
 import javax.crypto.Cipher;
 
@@ -168,7 +169,13 @@ public class Encrypt {
 	}
 
 	public static void main(String[] args) throws Exception {
-		String source = "Hello World!";// 要加密的字符串
+		System.out.println(Base64.getEncoder().encodeToString("252017".getBytes("utf-8"))); // MjUyMDE3===node.js.base64Encode
+		System.out.println(Base64.getUrlEncoder().encodeToString("252017".getBytes("utf-8"))); // MjUyMDE3===node.js.base64Encode
+		System.out.println(Base64.getMimeEncoder().encodeToString("252017".getBytes("utf-8"))); // MjUyMDE3===node.js.base64Encode
+		System.out.println(Base64.getEncoder().encodeToString("252017".getBytes("utf-16")));
+		System.out.println(Base64.getMimeEncoder().encodeToString("252017".getBytes("utf-16")));
+
+		String source = "252017";// 要加密的字符串
 		byte[] cryptograph = encrypt(source);// 生成的密文
 
 		// 可以将密文进行base64编码进行传输
