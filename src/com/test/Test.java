@@ -66,19 +66,24 @@ public class Test {
 			for (String str : tempp) {
 				System.out.print(str + "；");
 			}
-			
-			
-			
+
 			String temp = Integer.toHexString(545);
-	        int placeholderSize = 8 - temp.length();
-	        for (int i = 0; i < placeholderSize; i++) {
-	            temp += 0;
-	        }
-	        String result = ":";
-	        for (int i = 0; i < temp.length(); i += 2) {
-	            result += temp.substring(i, i + 2) + ":";
-	        }//:12:92:5d:09:
-	        System.out.println(result) ;
+			int placeholderSize = 8 - temp.length();
+			for (int i = 0; i < placeholderSize; i++) {
+				temp += 0;
+			}
+			String result = ":";
+			for (int i = 0; i < temp.length(); i += 2) {
+				result += temp.substring(i, i + 2) + ":";
+			} // :12:92:5d:09:
+			System.out.println(result);
+
+			System.out.println("\n");
+			for (int i = 0; i < 10; i++) {
+				System.out.println(i + "");
+				i += 1;
+				System.out.println(i + "\n");
+			}
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
